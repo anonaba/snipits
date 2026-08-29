@@ -1,4 +1,5 @@
 //############################# For experiment
+```js
 async function test() {
   // fetch('https://jsonplaceholder.typicode.com/todos/1')
   //     .then(response => response.json())
@@ -17,3 +18,4 @@ async function test() {
 
 test().then(message => console.log(message))
 console.log('C')
+```
