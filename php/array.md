@@ -62,6 +62,8 @@ Nested Array
 
 
 ```php
+// This is a very Important Concept
+// You should start recognizing this structure `An array containing associative arrays`
 $users = array(
   array(
     'name' => 'Damian',
