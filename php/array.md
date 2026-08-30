@@ -7,6 +7,13 @@ echo $fruits[0]; // output mansanas
 echo $fruits[2]; // output papaya
 ```
 
+Print its value to the browser with foreach
+```php
+foreach ($fruits as $fruit) {
+    echo $fruit . "<br>";
+}
+```
+
 Adding Items in an `array`
 ```php
 $fruits[] = "Mango"; // Mango will add to last index of $fruits array
@@ -38,6 +45,17 @@ $person = [
 ];
 
 echo $person["name"]; // output Damian
+```
+`foreach` With Associative Arrays
+```php
+foreach ($person as $key => $value) {
+    echo "$key: $value<br>";
+}
+//browser output
+
+name: Damian
+age: 25
+country: Philippines
 ```
 
 ```php
