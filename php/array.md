@@ -114,13 +114,13 @@ $users = [
 ```php
 # 1: var_dump()
 echo "<pre>";
-var_dump($users);
+var_dump($users); // showing array index position and data types
 echo "</pre>";
 ```
 ```php
 # 2 print_r()
 echo "<pre>";
-print_r($users);
+print_r($users); // showing array index position
 echo "</pre>";
 ```
 ```php
