@@ -9,7 +9,7 @@ echo add(1,1) // 2
 ```php
 $users = array(
   array(
-    'name' => 'Dove',
+    'name' => 'Damian',
     'age' => 25,
     'country' => 'Philippines',
   ),
