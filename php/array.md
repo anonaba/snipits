@@ -90,7 +90,7 @@ Updated info modern PHP code commonly uses the shorter syntax(`[]`) for creating
 ```php
 $users = [
     [
-        'name' => 'Dove',
+        'name' => 'Damian',
         'age' => 25,
         'country' => 'Philippines',
     ],
