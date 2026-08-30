@@ -22,4 +22,15 @@ export function useYourContext() {
 }
 
 
+// if we use typescript we have to deal with null initial state
+// Update your context hook to guard against null Inside your context file (where useTasks is defined), ensure it throws an error if used outside a provider:
+
+export function useYourContext() {
+  const context = useContext(YourContext);
+  if (!context) { // or  if (context === undefined)
+    throw new Error("useTasks must be used within a TaskProvider");
+  }
+  return context;
+};
 ```
+
