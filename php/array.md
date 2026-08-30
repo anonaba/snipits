@@ -82,6 +82,32 @@ $users = array(
   ),
 );
 
+
+
+
+
+Updated info modern PHP code commonly uses the shorter syntax(`[]`) for creating an array:
+```php
+$users = [
+    [
+        'name' => 'Dove',
+        'age' => 25,
+        'country' => 'Philippines',
+    ],
+    [
+        'name' => 'John',
+        'age' => 30,
+        'country' => 'Japan',
+    ],
+    [
+        'name' => 'Maria ',
+        'age' => 28,
+        'country' => 'Canada',
+    ],
+];
+```
+
+
 ```
 
 ## Printing array in the browser
