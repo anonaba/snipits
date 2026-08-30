@@ -108,11 +108,9 @@ $users = [
 ```
 
 
-```
+
 
 ## Printing array in the browser
-
-
 ```php
 # 1: var_dump()
 echo "<pre>";
