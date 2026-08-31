@@ -100,6 +100,24 @@ function describeUser(array $user)
 
   $filtered_books = filteredByAuthor($books, 'F. Scott Fitzgerald');
 
+    More flexible than above code 👆
+ // function filter(array $items, string $key, int $value): array
+  // {
+
+
+  //   $filtered_items = [];
+
+  //   foreach ($items as $book) {
+  //     if ($book[$key] === $value) {
+  //       $filtered_items[] = $book;
+  //     }
+  //   }
+
+  //   return  $filtered_items;
+  // };
+
+  // $filtered_books = filter($books, 'release_date', 1813);
+
 
 
 
