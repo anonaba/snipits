@@ -118,6 +118,27 @@ function describeUser(array $user)
 
   // $filtered_books = filter($books, 'release_date', 1813);
 
+ More flexible than above code 👆 this function is like the same as array_filter built in functioon in PHP 
+
+  // function filter(array $items, callable $fn): array
+  // {
+
+
+  //   $filtered_items = [];
+
+  //   foreach ($items as $item) {
+  //     if ($fn($item)) {
+  //       $filtered_items[] = $item;
+  //     }
+  //   }
+
+  //   return  $filtered_items;
+  // };
+
+  // $filtered_books = filter($books, function (array $book): bool {
+  //   return $book['release_date'] > 1937;
+  // });
+
 
 
 
