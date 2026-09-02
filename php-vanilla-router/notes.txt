@@ -1,0 +1,36 @@
+
+$books = [
+  [
+    "title" => "Animal Farm",
+    "author" => "George Orwell",
+    "release_date" => 1945,
+    "url" => "https://example.com"
+  ],
+  [
+    "title" => "Nineteen Eighty-Four",
+    "author" => "George Orwell",
+    "release_date" => 1949,
+    "url" => "https://example.com"
+  ],
+  [
+    "title" => "To Kill a Mockingbird",
+    "author" => "Harper Lee",
+    "release_date" => 1960,
+    "url" => "https://example.com"
+  ],
+  [
+    "title" => "The Great Gatsby",
+    "author" => "F. Scott Fitzgerald",
+    "release_date" => 1925,
+    "url" => "https://example.com"
+  ],
+  [
+    "title" => "The Hobbit",
+    "author" => "J.R.R. Tolkien",
+    "release_date" => 1937,
+    "url" => "https://example.com"
+  ]
+];
+
+
+root index.php is the single point of entry
