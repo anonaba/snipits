@@ -13,3 +13,14 @@ try {
 
 echo 'success';
 ```
+
+# Testing for query
+
+```php
+try {
+  $result = $db->query("select * from table");
+  echo 'Query ran succecfully';
+} catch (Exception $e) {
+  echo 'Data could not be retrieved from the database';
+}
+```
