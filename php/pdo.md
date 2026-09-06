@@ -24,3 +24,24 @@ try {
   echo 'Data could not be retrieved from the database';
 }
 ```
+
+SQLITE Testing
+```php
+try {
+  $db = new PDO("sqlite:databasenName");
+} catch (Exception $e) {
+  echo 'Could not connect to the database';
+  die();
+}
+
+try {
+  $result = $db->query("select * from products");
+} catch (Exception $e) {
+  echo 'Data could not be retrieved from the database';
+}
+
+
+echo "<pre>";
+var_dump($result->fetchAll(PDO::FETCH_OBJ));
+echo "</pre>";
+```
