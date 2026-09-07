@@ -6,3 +6,4 @@
 4. PHP
 5. CSS
 6. SCSS
+7. SHOPIFY
