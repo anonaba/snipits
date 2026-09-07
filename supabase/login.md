@@ -1,4 +1,6 @@
 ```tsx
+
+import type { Session, User } from '@supabase/supabase-js'
 // 1. Define the input credentials interface
 interface SignInCredentials {
   email: string;
@@ -7,7 +9,7 @@ interface SignInCredentials {
 
 // 2. Define a union type for the function's return object
 type SignInResponse = 
-  | { success: true; data: any } // You can replace 'any' with your Supabase User/Session type if desired
+  | { success: true; data:  { user: User; session: Session } } // You can replace 'any' with your Supabase User/Session type if desired
   | { success: false; error: string };
 
 // 3. Apply the types to the arrow function
