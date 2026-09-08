@@ -12,6 +12,17 @@ try {
 }
 
 echo 'success';
+
+//SQLITE
+try {
+  $db = new PDO('sqlie:database', null, null, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+  echo "Connected successfully to the database!\n";
+} catch (PDOException $e) {
+  echo 'Could not connect to the database ';
+  echo "Reason: " . $e->getMessage() . "\n";
+  die();
+}
+
 ```
 
 # Testing for query
