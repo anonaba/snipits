@@ -4,6 +4,10 @@ import express from 'express';
 const app = express();
 const router = express.Router();
 
+//anytime we're building a full stack application you need to get data from the client side and
+// the only way to get data from the client side is that we have to get it from the request.body object 
+app.use(express.json()); handles request.body
+
 app.get('/', (req, res) => {
     res.send('Hello from the Cars API!');
 });
