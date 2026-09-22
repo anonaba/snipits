@@ -4,15 +4,15 @@ console.log('before')
 getUserId(1, function(user) {
   console.log('User',user)
   
-  getRepo(function(repo) {
-     console.log('Repo',repo)
+  getRepo(user.gitHubUsername, function(repo) {
+     console.log('Repo', user.gitHubUsername, repo)
   })
 })
 
 console.log('after')
 
 
-
+  
 function getUserId(id,cb) {
     setTimeout(() => {
       console.log('Readin a user from a database')
@@ -23,10 +23,10 @@ function getUserId(id,cb) {
 }
 
 
-function getRepo(cb) {
+function getRepo(username, cb) {
 
    setTimeout(() => {
-      console.log('Calling github api')
+      console.log('Calling github api ' + username)
       cb(['repo1', 'repo2', 'repo3'])
   
     },2000)
