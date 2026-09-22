@@ -124,7 +124,7 @@ Promise.race([p1, p2])
 //output
 Async operation 1...
 Async operation 2...
-1
+1 // not array of result instead the value of the first full-filled promise
 
 
 ```
