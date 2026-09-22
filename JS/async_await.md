@@ -60,7 +60,11 @@ const p1 = Promise.reject(new Error('Error Message here'))
 p1.catch(error => console.log(error.message)) //return the error object with message property and a call stack that is available to error object
 ```
 
-Running Parallel Promises:
+# Running Parallel Promises:
+
+
+
+Promise.all()
 
 Notes: If any of the promises is rejected that promise that finaly promise that is return from promise that all is considered rejected
 If one failed promise in Promise.all it means all promise will be failed
@@ -80,11 +84,47 @@ const p2 = new Promise((resolve) => {
     }, 2000);
 });
 
-Promise.all([p1, p2]).then(result => console.log(result)).catch(error => console.log('Error', error.message))
+Promise.all([p1, p2])
+  .then(result => console.log(result))
+  .catch(error => console.log('Error', error.message))
 
 //output
 Async operation 1...
 Async operation 2...
 [ 1, 2 ]
+
+```
+Promise.race()
+
+Notes:
+
+Sometimes when want to kick a multiple asynchronous operations but you wanna do something as soon as one of this asynchronous operations completes so you don wanna wait for all of them to complete we just want to do something as soon as the first operation completes if that the case we use Promise.race()
+
+As soon one promise is full-filled in the Promise.race([p1, p2]) the promise is returned from this race() method will be considered full-filled
+```js
+
+const p1 = new Promise((resolve) => {
+    setTimeout(() => {
+        console.log('Async operation 1...');
+        resolve(1);
+    }, 2000);
+});
+
+const p2 = new Promise((resolve) => {
+    setTimeout(() => {
+        console.log('Async operation 2...');
+        resolve(2);
+    }, 2000);
+});
+
+Promise.race([p1, p2])
+  .then(result => console.log(result))
+  .catch(error => console.log('Error', error.message))
+
+//output
+Async operation 1...
+Async operation 2...
+1
+
 
 ```
