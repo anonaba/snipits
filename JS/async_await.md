@@ -59,3 +59,29 @@ const p1 = Promise.reject(new Error('Error Message here'))
 
 p1.catch(error => console.log(error.message)) //return the error object with message property and a call stack that is available to error object
 ```
+
+Running Parallel Promises:
+```js
+
+const p1 = new Promise((resolve) => {
+    setTimeout(() => {
+        console.log('Async operation 1...');
+        resolve(1);
+    }, 2000);
+});
+
+const p2 = new Promise((resolve) => {
+    setTimeout(() => {
+        console.log('Async operation 2...');
+        resolve(2);
+    }, 2000);
+});
+
+Promise.all([p1, p2]).then(result => console.log(result))
+
+//output
+Async operation 1...
+Async operation 2...
+[ 1, 2 ]
+
+```
