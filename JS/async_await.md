@@ -46,3 +46,16 @@ p
   .then(res => console.log(res))
   .catch(error => console.log(error.message))
 ```
+Promise API: Creating Settled Promise
+
+Sometimes  you want to create a promise that is already resolve this is particularly useful when writing unit test you want to simulate a scenario where a asynchronous operation like calling a web service completes successfully. In your unit test you want to create a promise that is already resolve
+```js
+const p = Promise.resolve({id:1})
+
+p.then(result => console.log(result))
+
+
+const p1 = Promise.reject(new Error('Error Message here'))
+
+p1.catch(error => console.log(error.message)) //return the error object with message property and a call stack that is available to error object
+```
