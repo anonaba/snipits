@@ -34,3 +34,15 @@ function getRepo(username, cb) {
 }
 
 ```
+Promise
+```js
+const p = new Promise((resolve,reject)=> {
+  // resolve(1)
+
+  reject(new Error('Error message'))
+})
+
+p
+  .then(res => console.log(res))
+  .catch(error => console.log(error.message))
+```
