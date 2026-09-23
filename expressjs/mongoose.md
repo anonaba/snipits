@@ -10,12 +10,21 @@ const courseSchema = new mongoose.Schema({
 });
 
 const Course = mongoose.model('Course', courseSchema);
-// sample data to add
-const course = new new Course({
-  name: 'Node.js Course',
-  author: 'Mosh',
-  tags: ['node', 'backend'],
-  isPublished: true
-});
+
+async function createCourse() {
+  // sample data to add
+  const course = new new Course({
+    name: 'Node.js Course',
+    author: 'Mosh',
+    tags: ['node', 'backend'],
+    isPublished: true
+  });
+  
+  //Saving to database mongodb  
+  const result = await course.save()
+  console.log(result)
+}
+
+createCourse()
 
 ```
